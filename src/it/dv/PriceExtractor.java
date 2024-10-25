@@ -61,7 +61,7 @@ public class PriceExtractor {
 		footer.add(calcoloPrezzoBase);
 		JButton calcoloPrezzoIvato = new JButton("Inverso,da prezzo senza iva a prezzo con iva");
 		footer.add(calcoloPrezzoIvato);
-		mainWindow.add(footer);
+	    mainWindow.add(footer);
 		
 		mainWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		mainWindow.setSize(600, 350);
@@ -86,10 +86,12 @@ public class PriceExtractor {
 		private JTextField prezzoConIva;
 		private JTextField iva;
 		private JTextField prezzoListino;
+		
 		public ListenerPrezzoListino(
 			JTextField prezzoConIva,
 			JTextField iva,
-			JTextField prezzoListino){
+			JTextField prezzoListino)
+		{
 			this.prezzoConIva= prezzoConIva;
 			this.iva=iva;
 			this.prezzoListino=prezzoListino;
@@ -98,6 +100,7 @@ public class PriceExtractor {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			try{
+				System.out.println(prezzoConIva.getText());
 				double prezzo = Double.valueOf(prezzoConIva.getText().trim());
 				double ivaV = Double.valueOf(iva.getText().trim());
 				double prezzoDiListino = prezzo/ (1 + (ivaV/100) );

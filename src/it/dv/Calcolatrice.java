@@ -98,6 +98,7 @@ public class Calcolatrice extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		 String s = e.getActionCommand();
 		 String ch=s.substring(0,1);
+		 System.out.println(s + " " + ch);
 		 switch(ch) {
 		 	
 		 	case "0": ifnumero(ch);break;
