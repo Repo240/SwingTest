@@ -167,7 +167,7 @@ public class SommaNumCasuali extends JFrame implements ActionListener{
 			sommaPar=sommaPar + "+" + Integer.toString(numGen);
 		}
 		
-		display.setText(sommaPar);
+		display.setText(sommaPar); 
 		somma= somma+numGen;
 		//display.setText(Integer.toString(numGen));
 		System.out.println("numGen= " + numGen);
